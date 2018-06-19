@@ -6,7 +6,9 @@
         </div>
 
         <div class="articles" v-for='(item,index) in result' :key='index'>
-            <p class="articleList" @click="goDetail(item)">{{item.name}}<span class="spanItem">({{inputValue}})</span></p>
+            <p class="articleList" @click="goDetail(item)">{{item.name}}
+                <span class="spanItem">({{listItem}})</span>
+            </p>
         </div>
     </div>
 
@@ -16,7 +18,7 @@
 export default {
   data() {
     return {
-      list: [],
+      listItem: "",
       inputValue: "",
       result: []
     };
@@ -48,7 +50,7 @@ export default {
         .then(d => {
           console.log(d);
           this.result = d.data.result;
-
+          this.listItem = this.inputValue;
           wx.hideLoading();
         })
         .catch(e => console.log("error", e));
@@ -85,17 +87,17 @@ export default {
       align-items: center;
     }
   }
-  .articles{
-      margin-top: 20rpx;
-      .articleList{
-          height: 40rpx;
-          color: #323232;
-          .spanItem{
-              color: #646464;
-              font-size: 24rpx;
-              margin-left: 15rpx;
-          }
+  .articles {
+    margin-top: 20rpx;
+    .articleList {
+      height: 40rpx;
+      color: #323232;
+      .spanItem {
+        color: #646464;
+        font-size: 24rpx;
+        margin-left: 15rpx;
       }
+    }
   }
 }
 </style>
