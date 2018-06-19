@@ -8,4 +8,4 @@
 
 ![搜索详情](https://github.com/zhangguosen3033/mpvue-note/blob/master/img/A2B911F0-E749-4228-B03F-1E7CB0096E97.png?raw=true)
 
-![gif]https://github.com/zhangguosen3033/mpvue-note/blob/master/img/000000.gif?raw=true
+![gif](https://github.com/zhangguosen3033/mpvue-note/blob/master/img/000000.gif?raw=true)
